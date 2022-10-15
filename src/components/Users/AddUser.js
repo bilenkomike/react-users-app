@@ -14,8 +14,12 @@ const AddUser = props => {
         if (+age < 1) {
             return;
         }
+
+        props.onAddNewUser({name: userName, age:age, id: Math.random().toString()});
+
         setUserName('');
         setAge('');
+        
     };
 
     const handleUserNameChange = e => {
